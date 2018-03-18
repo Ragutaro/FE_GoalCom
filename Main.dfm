@@ -161,6 +161,7 @@ object frmMain: TfrmMain
           end>
         ColumnClick = False
         HideSelection = False
+        HotTrackStyles = [htHandPoint, htUnderlineHot]
         ReadOnly = True
         RowSelect = True
         SmallImages = pngFlags
@@ -174,6 +175,10 @@ object frmMain: TfrmMain
         SortOrder = soAscending
         WrapAround = False
         DefaultSortOrder = soAscending
+        HoverColor = 16774117
+        HoverFontColor = clTeal
+        UnevenColor = 16710392
+        EvenColor = clWindow
       end
       object tbrEditFavorite: TSpTBXToolWindow
         Left = 0
@@ -353,6 +358,7 @@ object frmMain: TfrmMain
           end>
         ColumnClick = False
         HideSelection = False
+        HotTrackStyles = [htHandPoint, htUnderlineHot]
         MultiSelect = True
         ReadOnly = True
         RowSelect = True
@@ -365,6 +371,10 @@ object frmMain: TfrmMain
         SortOrder = soAscending
         WrapAround = False
         DefaultSortOrder = soAscending
+        HoverColor = 16774117
+        HoverFontColor = clTeal
+        UnevenColor = 16710392
+        EvenColor = clWindow
       end
     end
   end

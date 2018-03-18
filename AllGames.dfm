@@ -27,13 +27,17 @@ object frmAllGames: TfrmAllGames
     Height = 248
     Align = alClient
     HideSelection = False
+    HotTrack = True
     Indent = 19
     PopupMenu = popTvw
     ReadOnly = True
     RowSelect = True
     TabOrder = 0
     OnCreateNodeClass = tvwTreeCreateNodeClass
+    OnCustomDrawItem = tvwTreeCustomDrawItem
     OnDblClick = tvwTreeDblClick
+    HoverColor = 16774117
+    HoverFontColor = clTeal
     ExplicitTop = 234
     ExplicitWidth = 300
     ExplicitHeight = 158

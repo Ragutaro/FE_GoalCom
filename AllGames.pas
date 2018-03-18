@@ -33,6 +33,8 @@ type
     procedure cmbListClick(Sender: TObject);
     procedure popAddFavoriteClick(Sender: TObject);
     procedure cmbSearchKeyPress(Sender: TObject; var Key: Char);
+    procedure tvwTreeCustomDrawItem(Sender: TCustomTreeView; Node: TTreeNode;
+      State: TCustomDrawState; var DefaultDraw: Boolean);
   private
     { Private 宣言 }
     procedure _LoadSettings;
@@ -322,6 +324,12 @@ procedure TfrmAllGames.tvwTreeCreateNodeClass(Sender: TCustomTreeView;
   var NodeClass: TTreeNodeClass);
 begin
   NodeClass := TTreeNodeEx;
+end;
+
+procedure TfrmAllGames.tvwTreeCustomDrawItem(Sender: TCustomTreeView;
+  Node: TTreeNode; State: TCustomDrawState; var DefaultDraw: Boolean);
+begin
+  tvwTree.ColorizeNodes(Node, State, DefaultDraw);
 end;
 
 procedure TfrmAllGames.tvwTreeDblClick(Sender: TObject);

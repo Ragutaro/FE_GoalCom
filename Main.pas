@@ -773,8 +773,7 @@ end;
 procedure TfrmMain.lvwFavCustomDrawItem(Sender: TCustomListView;
   Item: TListItem; State: TCustomDrawState; var DefaultDraw: Boolean);
 begin
-  lvwFav.SetListitemBackgroundColor(Item, $00FEFAF8, False, DefaultDraw);
-  lvwFav.SetHoverStyle(State, DefaultDraw);
+  lvwFav.ColorizeLines(Item, State, DefaultDraw);
 end;
 
 procedure TfrmMain.lvwFavDblClick(Sender: TObject);
@@ -818,8 +817,7 @@ end;
 procedure TfrmMain.lvwListCustomDrawItem(Sender: TCustomListView;
   Item: TListItem; State: TCustomDrawState; var DefaultDraw: Boolean);
 begin
-  lvwList.SetListitemBackgroundColor(Item, $00FEFAF8, False, DefaultDraw);
-  lvwList.SetHoverStyle(State, DefaultDraw);
+  lvwList.ColorizeLines(Item, State, DefaultDraw);
   with lvwList.Canvas do
   begin
     if Pos(':', Item.SubItems[1]) > 0 then
